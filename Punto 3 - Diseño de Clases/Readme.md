@@ -38,11 +38,23 @@ ConsoleApp-Clases/
 dotnet run
 ```
 3. Verás en la consola:
-- El inventario inicial de libros.
-- Préstamos y devoluciones simulados.
-- Resultados de búsquedas y préstamos activos.
+    - El inventario inicial de libros.
+    - Préstamos y devoluciones simulados.
+    - Resultados de búsquedas y préstamos activos.
 
 ---
 
 ## Diagrama de clases
 
+```mermaid
+classDiagram
+  class Book {
+    +string Isbn
+    +string Title
+    +string Author
+    +int TotalCopies
+    +int AvailableCopies
+    +bool IsAvailable()
+  }
+
+```
