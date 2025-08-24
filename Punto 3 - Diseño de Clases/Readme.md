@@ -57,4 +57,36 @@ classDiagram
     +bool IsAvailable()
   }
 
+   class Member {
+    +int Id
+    +string Name
+    +List~string~ BorrowedIsbns
+    +int MaxLoans
+    +bool CanBorrow()
+  }
+
+  class Library {
+    -Dictionary~string, Book~ books
+    -Dictionary~int, Member~ members
+    -Dictionary~string, LoanInfo~ loans
+    +void AddBook(Book book)
+    +void RegisterMember(Member member)
+    +void Borrow(string isbn, int memberId)
+    +void Return(string isbn, int memberId)
+    +IEnumerable~Book~ ListBooks()
+    +IEnumerable~Book~ Search(string term)
+    +void DumpLoans()
+    +void Borrow(string isbn, int memberId)
+    +void Return(string isbn, int memberId)
+  }
+
+  class LoanInfo {
+    +int MemberId
+    +DateTime DueDateUtc
+  }
+
+Library "1" o--> "*" Book
+  Library "1" o--> "*" Member
+  Library ..> LoanInfo
+
 ```
