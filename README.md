@@ -1,4 +1,3 @@
-```mermaid
 erDiagram
   USERS ||--o{ POSTS : writes
   USERS ||--o{ COMMENTS : writes
@@ -7,40 +6,40 @@ erDiagram
   TAGS  ||--o{ POST_TAGS : used_in
 
   USERS {
-    int id PK
+    int id
     string name
-    string email UNIQUE
+    string email
     string password_hash
-    datetime created_at
+    date created_at
   }
 
   POSTS {
-    int id PK
-    int user_id FK
+    int id
+    int user_id
     string title
-    text content
-    datetime created_at
-    datetime updated_at
-    boolean is_published
+    string content
+    date created_at
+    date updated_at
+    bool is_published
   }
 
   COMMENTS {
-    int id PK
-    int post_id FK
-    int user_id FK
-    text content
-    datetime created_at
-    boolean is_deleted
+    int id
+    int post_id
+    int user_id
+    string content
+    date created_at
+    bool is_deleted
   }
 
   TAGS {
-    int id PK
-    string name UNIQUE
-    string slug UNIQUE
-    datetime created_at
+    int id
+    string name
+    string slug
+    date created_at
   }
 
   POST_TAGS {
-    int post_id FK
-    int tag_id FK
+    int post_id
+    int tag_id
   }
