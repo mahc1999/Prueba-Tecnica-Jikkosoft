@@ -5,7 +5,7 @@ El sistema permite registrar **libros** y **miembros**, gestionar **préstamos**
 
 ---
 
-## ⚙️ Especificaciones
+## Especificaciones
 - **Lenguaje:** C#  
 - **Framework:** .NET 8  
 - **Tipo de proyecto:** Consola  
@@ -15,3 +15,34 @@ El sistema permite registrar **libros** y **miembros**, gestionar **préstamos**
   - Cada préstamo vence a los **14 días**.  
 
 ---
+
+## Estructura del proyecto
+
+```text
+ConsoleApp-Clases/
+├─ Book.cs          # Clase Book (modelo de libro)
+├─ Member.cs        # Clase Member (modelo de miembro)
+├─ Library.cs       # Clase Library (gestión de inventario y préstamos)
+├─ Program.cs       # Programa principal (demo y pruebas)
+├─ ConsoleAPP-Library.csproj
+```
+
+---
+
+## Ejecución
+
+1. Abre la carpeta ConsoleAPP- en una terminal.
+2. Compila y ejecuta con:
+
+```bash
+dotnet run
+```
+3. Verás en la consola:
+- El inventario inicial de libros.
+- Préstamos y devoluciones simulados.
+- Resultados de búsquedas y préstamos activos.
+
+---
+
+## Diagrama de clases
+
