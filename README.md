@@ -1,3 +1,4 @@
+```mermaid
 erDiagram
   USERS ||--o{ POSTS : writes
   USERS ||--o{ COMMENTS : writes
@@ -43,3 +44,4 @@ erDiagram
     int post_id
     int tag_id
   }
+```
