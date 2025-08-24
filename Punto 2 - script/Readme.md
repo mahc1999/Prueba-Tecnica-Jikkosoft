@@ -1,4 +1,4 @@
-# Punto 2 - Algoritmo Two Sum (C# / .NET 8)
+# Punto 2 - Algoritmo (C# / .NET 8)
 
 Implementación del problema **Two Sum**: dada una lista de enteros y un número objetivo (**target**), se buscan **índices** de dos elementos cuya suma sea igual al target.
 
@@ -13,9 +13,12 @@ Implementación del problema **Two Sum**: dada una lista de enteros y un número
 No requiere librerías externas, solo .NET 8 SDK.
 
 ## Archivos relevantes
+```text
 ConsoleAPP-TwoSum/
-│── Program.cs                 # Lógica y entrada por consola
-│── ConsoleAPP-TwoSum.csproj   # Proyecto .NET 8
+├─ Program.cs                # Lógica y entrada por consola
+├─ ConsoleAPP-TwoSum.csproj  # Proyecto .NET 8
+└─ README.md                 # Instrucciones del punto 2
+```
 
 ## Ejecución
 1. Clonar el repositorio o descargar este directorio.
